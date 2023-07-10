@@ -1,0 +1,12 @@
+.BackgroundGrigio{
+    background-color: aliceblue;
+    box-shadow: 1px 1px grey;
+}
+
+.justify-content-between{
+    display: flex;
+    justify-content: start;
+    padding : 1rem 3rem;
+}
+
+
