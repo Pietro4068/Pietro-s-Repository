@@ -1,9 +1,14 @@
-<div class="BackgroundGrigio">
-    <div class=" justify-content-between ">
-        <app-homepage></app-homepage>
-        <app-list></app-list>
-    </div>
-  </div>
-  
- 
+<div class="justify-content-between" [class]="bgcolor">
+  <button mat-button>Homepage</button>
+  <button mat-button>Lista</button>
+</div>
+<app-homepage
+  [oggetto]="testOggetto"
+  (changeColor)="changeColor()"
+  (pasquale)="pippo()"
+  (changeColor4)="changeColor4()"
+  (changeColor3)="changeColor3()"
+></app-homepage>
 
+<!-- 
+[ngStyle]="{ 'Background-color': bgcolor }" -->

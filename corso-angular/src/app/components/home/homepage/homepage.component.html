@@ -1,8 +1,39 @@
-<!-- <mat-slide-toggle>Toggle me!</mat-slide-toggle> -->
+<div class="align">
+  <button class="button" mat-raised-button (click)="test()">Basic</button>
+  <button class="button" mat-raised-button (click)="paperino()" color="primary">
+    Primary
+  </button>
+  <button class="button" mat-raised-button (click)="pluto()" (click)="cambiaColore3()" color="accent">
+    Accent
+  </button>
+  <button class="button" mat-raised-button (click)="cambiaColore()" color="warn">Warn</button>
+</div>
 
-<button mat-button [matMenuTriggerFor]="menu">HOMEPAGE</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
+<div class="" style="margin-left: 30rem;">
+ <div *ngFor="let item of users; let i = index"> 
+  {{i}} <p><strong>{{item.nome}}   </strong>{{item.cognome}}</p> 
+  
+ </div>
+</div>
+
+<div class="align" style="flex-direction: column;">
+  <button
+    [disabled]="isDisabled"
+    class="button"
+    (click)="increment()"
+    mat-raised-button
+    color="warn"
+  >Increment</button>
+{{ incrementa }}
+
+
+<button
+    (click)="reset()"
+    mat-raised-button
+    color="warn"
+  >Reset counter</button>
+</div>
+
+
+
 
