@@ -11,12 +11,11 @@ export class HomepageComponent {
   @Output('changeColor3') changeColor3: EventEmitter<any> = new EventEmitter();
   @Output('changeColor4') changeColor4: EventEmitter<any> = new EventEmitter();
 
-
   @Input() oggetto = '';
 
   incrementa: number = 0;
   isDisabled: boolean = false;
-  
+  i: number = 0;
 
   users = [
     {
@@ -85,24 +84,23 @@ export class HomepageComponent {
   pluto() {
     alert(this.oggetto);
   }
-  cambiaColore3(){
-    this.changeColor3.emit()
+  cambiaColore3() {
+    this.changeColor3.emit();
   }
 
-  cambiaColore(){
-    this.changeColor4.emit()
+  cambiaColore() {
+    this.changeColor4.emit();
   }
-
 
   increment() {
     this.incrementa++;
     if (this.incrementa == this.users.length) {
       this.isDisabled = true;
     }
-     ;
   }
   reset() {
     this.incrementa = 0;
     this.isDisabled = false;
   }
+
 }

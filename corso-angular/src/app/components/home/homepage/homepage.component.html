@@ -3,37 +3,47 @@
   <button class="button" mat-raised-button (click)="paperino()" color="primary">
     Primary
   </button>
-  <button class="button" mat-raised-button (click)="pluto()" (click)="cambiaColore3()" color="accent">
+  <button
+    class="button"
+    mat-raised-button
+    (click)="pluto()"
+    (click)="cambiaColore3()"
+    color="accent"
+  >
     Accent
   </button>
-  <button class="button" mat-raised-button (click)="cambiaColore()" color="warn">Warn</button>
+  <button
+    class="button"
+    mat-raised-button
+    (click)="cambiaColore()"
+    color="warn"
+  >
+    Warn
+  </button>
 </div>
-
-<div class="" style="margin-left: 30rem;">
- <div *ngFor="let item of users; let i = index"> 
-  {{i}} <p><strong>{{item.nome}}   </strong>{{item.cognome}}</p> 
-  
- </div>
-</div>
-
-<div class="align" style="flex-direction: column;">
+<div class="align" style="flex-direction: column">
   <button
     [disabled]="isDisabled"
     class="button"
     (click)="increment()"
     mat-raised-button
     color="warn"
-  >Increment</button>
-{{ incrementa }}
+  >
+    Increment
+  </button>
+  {{ incrementa }}
 
-
-<button
-    (click)="reset()"
-    mat-raised-button
-    color="warn"
-  >Reset counter</button>
+  <button (click)="reset()" mat-raised-button color="warn">
+    Reset counter
+  </button>
+ 
 </div>
-
-
+<div class="align1" style="flex-direction: column; ">
+  <div *ngFor="let item of users; index as i">
+    <p *ngIf="i < incrementa">
+      <strong>{{ i + 1}} {{ item.nome }} </strong>{{ item.cognome }}
+    </p>
+  </div>
+</div> 
 
 
