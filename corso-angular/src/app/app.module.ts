@@ -11,6 +11,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import { TestService } from './test.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
@@ -22,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     HomepageComponent,
     ListComponent,
     ActionsComponent,
+    NavbarComponent,
     
   ],
   imports: [
@@ -33,7 +36,7 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [TestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

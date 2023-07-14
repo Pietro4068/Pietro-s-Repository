@@ -1,0 +1,29 @@
+.BackgroundGrigio {
+  background-color: aliceblue;
+  box-shadow: 1px 1px grey;
+}
+
+.justify-content-between {
+  display: flex-start;
+  padding: 1rem 3rem;
+}
+
+.BackgroundVerde {
+  background-color: green;
+  box-shadow: 1px 1px grey;
+}
+
+.BackgroundArancione {
+  background-color: orange;
+  box-shadow: 1px 1px grey;
+}
+
+.BackgroundBlu {
+  background-color: blue;
+  box-shadow: 1px 1px grey;
+}
+
+.BackgroundRosa {
+  background-color: pink;
+  box-shadow: 1px 1px grey;
+}

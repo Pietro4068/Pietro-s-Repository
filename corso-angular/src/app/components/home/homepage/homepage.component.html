@@ -6,7 +6,6 @@
   <button
     class="button"
     mat-raised-button
-    (click)="pluto()"
     (click)="cambiaColore3()"
     color="accent"
   >
@@ -33,17 +32,20 @@
   </button>
   {{ incrementa }}
 
-  <button (click)="reset()" mat-raised-button color="warn" style="margin:1.5rem;">
+  <button
+    (click)="reset()"
+    mat-raised-button
+    color="warn"
+    style="margin: 1.5rem"
+  >
     Reset counter
   </button>
- 
 </div>
-<div class="align1" style="flex-direction: column; ">
-  <div *ngFor="let item of users; index as i">
+<div class="align1" style="flex-direction: column">
+  <div *ngFor="let item of serviceTool.getUtenti(); index as i">
     <p *ngIf="i < incrementa">
-      <strong>{{ i + 1}} {{ item.nome }} </strong>{{ item.cognome }} {{ item.citta }}
+      <strong>{{ i + 1 }} {{ item.nome }} </strong>{{ item.cognome }}
+      {{ item.citta }}
     </p>
   </div>
-</div> 
-
-
+</div>
