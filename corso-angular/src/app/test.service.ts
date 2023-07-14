@@ -6,7 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class TestService {
   constructor() {}
-  private color1  = new Subject<void>();
+  private color1 = new Subject<void>();
   private color2 = new Subject<void>();
   private color3 = new Subject<void>();
   private color4 = new Subject<void>();
@@ -22,21 +22,25 @@ export class TestService {
         nome: 'Stefano',
         cognome: 'Vanga',
         citta: 'Burundi',
+        dataNascita: new Date(1998, 7, 19),
       },
       {
         nome: 'Pasquale',
         cognome: 'Vanga',
         citta: 'Burundi',
+        dataNascita: new Date(1998, 7, 19),
       },
       {
         nome: 'Gennaro',
         cognome: 'Vanga',
         citta: 'Burundi',
+        dataNascita: new Date(1998, 7, 19),
       },
       {
         nome: 'Vincenzo',
         cognome: 'Vanga',
         citta: 'Burundi',
+        dataNascita: new Date(1998, 7, 19),
       },
       {
         nome: 'Pietro',
@@ -52,6 +56,7 @@ export class TestService {
         nome: 'Abdul',
         cognome: 'Vanga',
         citta: 'Burundi',
+        dataNascita: new Date(1998, 7, 19),
       },
       {
         nome: 'Marshalla',

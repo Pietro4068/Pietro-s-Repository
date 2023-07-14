@@ -14,9 +14,18 @@ export class ListComponent {
   ]
   public users : any[] = [];
 
-  constructor(public ListaUtenti: TestService){}
+  constructor(public serviceTool: TestService){}
+  birthday = new Date(1988, 3, 15); 
 
   ngOnInit() {
-    this.users = this.ListaUtenti.getUtenti();
+    this.users = this.serviceTool.getUtenti();
   }
+
+  eliminaOggetto(){
+
+    let length = this.users.length;
+    console.log('users', this.users)
+    this.users.pop();
+  }
+
 }

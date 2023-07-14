@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { TestService } from 'src/app/test.service';
 
 @Component({
@@ -29,6 +29,12 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit() {
     this.users = this.serviceTool.getUtenti();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    
+    this.users = this.serviceTool.getUtenti();
+
   }
   
 
