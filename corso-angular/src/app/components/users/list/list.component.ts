@@ -11,4 +11,5 @@ export class ListComponent {
     {item1: "Ciao sono il primo oggetto del primo array"},
     {item2: "Ciao sono il primo oggetto del secondo array "}
   ]
+  
 }

@@ -21,7 +21,7 @@
     Warn
   </button>
 </div>
-<div class="align" style="flex-direction: column">
+<div class="align" style="flex-direction: row">
   <button
     [disabled]="isDisabled"
     class="button"
@@ -33,7 +33,7 @@
   </button>
   {{ incrementa }}
 
-  <button (click)="reset()" mat-raised-button color="warn">
+  <button (click)="reset()" mat-raised-button color="warn" style="margin:1.5rem;">
     Reset counter
   </button>
  
@@ -41,7 +41,7 @@
 <div class="align1" style="flex-direction: column; ">
   <div *ngFor="let item of users; index as i">
     <p *ngIf="i < incrementa">
-      <strong>{{ i + 1}} {{ item.nome }} </strong>{{ item.cognome }}
+      <strong>{{ i + 1}} {{ item.nome }} </strong>{{ item.cognome }} {{ item.citta }}
     </p>
   </div>
 </div> 

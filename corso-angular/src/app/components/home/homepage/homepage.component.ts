@@ -10,12 +10,14 @@ export class HomepageComponent {
   @Output('pasquale') pippo: EventEmitter<any> = new EventEmitter();
   @Output('changeColor3') changeColor3: EventEmitter<any> = new EventEmitter();
   @Output('changeColor4') changeColor4: EventEmitter<any> = new EventEmitter();
+  @Output('EmitDati') EmitDati: EventEmitter<any> = new EventEmitter();
 
   @Input() oggetto = '';
 
   incrementa: number = 0;
   isDisabled: boolean = false;
   i: number = 0;
+  
 
   users = [
     {
@@ -103,4 +105,7 @@ export class HomepageComponent {
     this.isDisabled = false;
   }
 
+  EmitDatiUsers() {
+    this.EmitDati.emit(this.users);
+  }
 }
