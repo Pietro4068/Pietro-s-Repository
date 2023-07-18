@@ -16,65 +16,72 @@ export class TestService {
   funzioneColor3$ = this.color3.asObservable();
   funzioneColor4$ = this.color4.asObservable();
 
+  users = [
+    {
+      nome: 'Stefano',
+      cognome: 'Vanga',
+      citta: 'Burundi',
+      dataNascita: new Date(1998, 7, 19),
+    },
+    {
+      nome: 'Pasquale',
+      cognome: 'Vanga',
+      citta: 'Burundi',
+      dataNascita: new Date(1998, 7, 19),
+    },
+    {
+      nome: 'Gennaro',
+      cognome: 'Vanga',
+      citta: 'Burundi',
+      dataNascita: new Date(1998, 7, 19),
+    },
+    {
+      nome: 'Vincenzo',
+      cognome: 'Vanga',
+      citta: 'Burundi',
+      dataNascita: new Date(1998, 7, 19),
+    },
+    {
+      nome: 'Pietro',
+      cognome: 'Vanga',
+      citta: 'Burundi',
+    },
+    {
+      nome: 'Matteo',
+      cognome: 'Vanga',
+      citta: 'Burundi',
+    },
+    {
+      nome: 'Abdul',
+      cognome: 'Vanga',
+      citta: 'Burundi',
+      dataNascita: new Date(1998, 7, 19),
+    },
+    {
+      nome: 'Marshalla',
+      cognome: 'Vanga',
+      citta: 'Burundi',
+    },
+    {
+      nome: 'Lucia',
+      cognome: 'Vanga',
+      citta: 'Burundi',
+    },
+    {
+      nome: 'Franpaolo',
+      cognome: 'Vanga',
+      citta: 'Burundi',
+    },
+  ];
+
   getUtenti() {
-    return [
-      {
-        nome: 'Stefano',
-        cognome: 'Vanga',
-        citta: 'Burundi',
-        dataNascita: new Date(1998, 7, 19),
-      },
-      {
-        nome: 'Pasquale',
-        cognome: 'Vanga',
-        citta: 'Burundi',
-        dataNascita: new Date(1998, 7, 19),
-      },
-      {
-        nome: 'Gennaro',
-        cognome: 'Vanga',
-        citta: 'Burundi',
-        dataNascita: new Date(1998, 7, 19),
-      },
-      {
-        nome: 'Vincenzo',
-        cognome: 'Vanga',
-        citta: 'Burundi',
-        dataNascita: new Date(1998, 7, 19),
-      },
-      {
-        nome: 'Pietro',
-        cognome: 'Vanga',
-        citta: 'Burundi',
-      },
-      {
-        nome: 'Matteo',
-        cognome: 'Vanga',
-        citta: 'Burundi',
-      },
-      {
-        nome: 'Abdul',
-        cognome: 'Vanga',
-        citta: 'Burundi',
-        dataNascita: new Date(1998, 7, 19),
-      },
-      {
-        nome: 'Marshalla',
-        cognome: 'Vanga',
-        citta: 'Burundi',
-      },
-      {
-        nome: 'Lucia',
-        cognome: 'Vanga',
-        citta: 'Burundi',
-      },
-      {
-        nome: 'Franpaolo',
-        cognome: 'Vanga',
-        citta: 'Burundi',
-      },
-    ];
+    return this.users;
   }
+
+  setUtenti(utenti: any) {
+    this.users = utenti;
+  }
+
   changeColor() {
     this.color1.next();
   }

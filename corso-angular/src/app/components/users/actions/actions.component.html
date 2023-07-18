@@ -1,1 +1,44 @@
-<p>actions works!</p>
+<h1 style="text-align:center;" *ngIf="Anni >= 18">l'utente è maggiorenne</h1>
+
+<form [formGroup]="homeform" (ngSubmit)="onSubmit()">
+  <div class="centro" style=" width: 100%">
+    <mat-form-field style="margin: 2rem">
+      <mat-label>Nome</mat-label>
+      <input matInput type="text" name="nome"  required formControlName="nome"/>
+    </mat-form-field>
+    <p *ngIf="!homeform.get('nome').valid && homeform.get('nome').touched">Inserisci il nome</p>
+    <mat-form-field style="margin: 2rem">
+      <mat-label>Cognome</mat-label>
+      <input matInput type="text" name="cognome"  required formControlName="cognome"/>
+    </mat-form-field>
+    <p *ngIf="!homeform.get('cognome').valid && homeform.get('cognome').touched">Inserisci il cognome</p>
+    <mat-form-field style="margin: 2rem">
+      <mat-label>Città</mat-label>
+      <input matInput type="text" name="citta" required formControlName="citta"/>
+    </mat-form-field>
+     <p *ngIf="!homeform.get('citta').valid && homeform.get('citta').touched">Inserisci la città</p> 
+    <mat-form-field style="margin: 2rem">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email"  required formControlName="email"/>
+      </mat-form-field>
+       <p *ngIf="!homeform.get('email').valid && homeform.get('email').touched">Inserisci l'email corretta</p> 
+    <!-- <mat-form-field style="margin: 2rem">
+      <mat-label>Data</mat-label>
+      <input matInput type="date" name="date" required formControlName="Data"/>
+    </mat-form-field>-->
+    <mat-form-field> 
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" required formControlName="dataNascita" >
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <p *ngIf="!homeform.get('dataNascita').valid && homeform.get('dataNascita').touched">Inserisci una data valida</p> 
+  </div>
+  <div style="text-align:center;">
+  <button mat-raised-button color="primary" type="submit" >Submit</button>
+</div>
+</form>
+
+<!-- [disabled]="!homeform.valid" -->
+

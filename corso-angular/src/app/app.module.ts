@@ -10,9 +10,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
+import {MatNativeDateModule} from '@angular/material/core';
+
+
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestService } from './test.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
@@ -25,16 +35,23 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ListComponent,
     ActionsComponent,
     NavbarComponent,
+    NotFoundComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     MatSlideToggleModule,
     MatMenuModule,
     MatButtonModule,
     FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [TestService],
   bootstrap: [AppComponent]

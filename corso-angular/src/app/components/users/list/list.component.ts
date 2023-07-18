@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewChecked, Component, SimpleChanges } from '@angular/core';
 import { TestService } from 'src/app/test.service';
 
 @Component({
@@ -6,13 +6,14 @@ import { TestService } from 'src/app/test.service';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent {
+export class ListComponent implements AfterViewChecked {
 
   item = [
     {item1: "Ciao sono il primo oggetto del primo array"},
-    {item2: "Ciao sono il primo oggetto del secondo array "}
+    {item2: "Ciao sono il secondo oggetto del primo array "}
   ]
-  public users : any[] = [];
+
+  public users : any[] = this.serviceTool.getUtenti();
 
   constructor(public serviceTool: TestService){}
   birthday = new Date(1988, 3, 15); 
@@ -26,6 +27,10 @@ export class ListComponent {
     let length = this.users.length;
     console.log('users', this.users)
     this.users.pop();
+  }
+
+  ngAfterViewChecked(): void {
+    this.users = this.serviceTool.getUtenti();
   }
 
 }

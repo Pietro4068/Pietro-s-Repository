@@ -1,0 +1,13 @@
+
+
+  .centro{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .centro mat-form-field{
+    width: 80%;
+  }
