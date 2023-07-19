@@ -1,3 +1,5 @@
+<h1 style="text-align: center; margin: 2rem;">INSERISCI I TUOI DATI</h1>
+
 <h1 style="text-align:center;" *ngIf="Anni >= 18">l'utente è maggiorenne</h1>
 
 <form [formGroup]="homeform" (ngSubmit)="onSubmit()">
@@ -37,8 +39,10 @@
   </div>
   <div style="text-align:center;">
   <button mat-raised-button color="primary" type="submit" >Submit</button>
+
 </div>
 </form>
+
 
 <!-- [disabled]="!homeform.valid" -->
 

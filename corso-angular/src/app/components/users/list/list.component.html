@@ -1,8 +1,8 @@
-<div>
-  <a style="text-decoration: none;" routerLink="FormContatti">Aggiungi Utente</a>
+<div style="text-align: center; margin: 2rem;">
+  <a style="text-decoration: none; color: blue;" routerLink="FormContatti">Aggiungi Utente</a>
 </div>
 
-<div style="text-align: center">
+<!-- <div style="text-align: center">
   <button mat-button [matMenuTriggerFor]="menu">LISTA</button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item>{{ item[0].item1 }}</button>
@@ -21,6 +21,19 @@
 
 <div style="text-align: center;">
 <button (click)="eliminaOggetto()">ELIMINA OGGETTO</button>
-</div>
+</div> -->
 
+
+<div class="align1" style="flex-direction: column; text-align:center">
+  <div *ngFor="let item of persone; index as i" style="display: flex; align-items:center; justify-content: center; margin: 1.5rem 0rem;">
+    <p style="margin:0">
+      <strong>{{ i + 1 }} {{ item.nome }} </strong>{{ item.cognome }}
+      {{ item.citta }} {{item.email}} {{ item.dataNascita | date: "d MMMM yyyy" }} 
+      <button mat-stroked-button color="warn" style="margin-left: 2rem;" (click)="OnDeletePersona(item.id)"  style="margin-left: 2rem;">Elimina Utente</button>
+      <button mat-stroked-button color="primary" style="margin-left: 2rem;" (click)="onPatchPersona(item.id)"  style="margin-left: 2rem;">Modifica Utente</button>
+
+    </p>
+
+  </div>
+</div>
 

@@ -14,9 +14,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-
 import {MatNativeDateModule} from '@angular/material/core';
-
+import {HttpClientModule} from '@angular/common/http';
 
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -52,6 +51,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    HttpClientModule,
+    
   ],
   providers: [TestService],
   bootstrap: [AppComponent]
