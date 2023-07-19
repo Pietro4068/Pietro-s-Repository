@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
-import { TestService } from 'src/app/test.service';
+import { TestService } from 'src/app/services/test.service';
 
 @Component({
   selector: 'app-homepage',

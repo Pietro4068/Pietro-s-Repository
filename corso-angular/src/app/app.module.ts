@@ -19,9 +19,10 @@ import {HttpClientModule} from '@angular/common/http';
 
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TestService } from './test.service';
+import { TestService } from './services/test.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 
 
 
@@ -35,6 +36,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     ActionsComponent,
     NavbarComponent,
     NotFoundComponent,
+    RegistrazioneComponent,
     
   ],
   imports: [

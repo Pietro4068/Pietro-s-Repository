@@ -1,7 +1,7 @@
 import { AfterViewChecked, Component, OnInit, SimpleChanges } from '@angular/core';
 import { map } from 'rxjs';
 import { FirebaseService } from 'src/app/services/firebase.service';
-import { TestService } from 'src/app/test.service';
+import { TestService } from 'src/app/services/test.service';
 
 @Component({
   selector: 'app-list',

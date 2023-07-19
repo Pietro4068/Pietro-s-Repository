@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
-import { TestService } from 'src/app/test.service';
+import { TestService } from 'src/app/services/test.service';
 import { ListComponent } from '../list/list.component';
 import { FirebaseService } from 'src/app/services/firebase.service';
 
