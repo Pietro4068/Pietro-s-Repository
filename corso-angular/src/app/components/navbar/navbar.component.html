@@ -1,6 +1,11 @@
 <div class="justify-content-between" [class]="bgcolor">
-  <button mat-button><a style="text-decoration: none; color: black;" routerLink="Homepage">Homepage</a></button>
-  <button mat-button><a style="text-decoration: none; color: black;" routerLink="Lista">Lista Utenti</a></button>
+  <button mat-button routerLink="Homepage"><a style="text-decoration: none; color: black;" >Homepage</a></button>
+  <button mat-button routerLink="Lista"><a style="text-decoration: none; color: black;">Lista Utenti</a></button>
+  <button mat-button routerLink="Accedi"><a style="text-decoration: none; color: black;">Accedi</a></button>
+  <button mat-button routerLink="Registrazione"><a style="text-decoration: none; color: black;">Registrati</a></button>
+  <button mat-button (click)="onLogout()"><a style="text-decoration: none; color: black;">Log Out</a></button>
+
+  
 </div>
 
 

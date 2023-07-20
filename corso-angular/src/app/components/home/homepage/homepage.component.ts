@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+import { FirebaseService } from 'src/app/services/firebase.service';
 import { TestService } from 'src/app/services/test.service';
 
 @Component({
@@ -23,13 +25,30 @@ export class HomepageComponent implements OnInit {
   
   
 
+ 
+
+  constructor(public serviceTool: TestService, private authService: AuthService, private firebase:FirebaseService){}
+  persone:any
   public users : any[] = [];
+  // ngOnInit() {
+  //   this.users = this.serviceTool.getUtenti();
+    
+  // }
 
-  constructor(public serviceTool: TestService){}
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.firebase.GetUser('https://corso-angular-ae09a-default-rtdb.europe-west1.firebasedatabase.app/persone.json').subscribe((data :any) =>{
+      // console.log(data)
+    this.persone = Object.keys(data).map((key) => {
+      data[key]['id'] = key
+      return data[key]})
+    console.log(this.persone)
+    
+    })
+   }
 
-  ngOnInit() {
-    this.users = this.serviceTool.getUtenti();
-  }
+  
 
   ngOnChanges(changes: SimpleChanges) {
     
@@ -37,7 +56,6 @@ export class HomepageComponent implements OnInit {
 
   }
   
-
   bgcolor = 'green';
   coloreNav = '';
   title = 'ciao';
@@ -62,7 +80,7 @@ export class HomepageComponent implements OnInit {
 
   increment() {
     this.incrementa++;
-    if (this.incrementa == this.users.length) {
+    if (this.incrementa == this.persone.length) {
       this.isDisabled = true;
     }
   }

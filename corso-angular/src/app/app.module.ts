@@ -23,6 +23,7 @@ import { TestService } from './services/test.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
+import { AccediComponent } from './components/accedi/accedi.component';
 
 
 
@@ -37,6 +38,7 @@ import { RegistrazioneComponent } from './components/registrazione/registrazione
     NavbarComponent,
     NotFoundComponent,
     RegistrazioneComponent,
+    AccediComponent,
     
   ],
   imports: [

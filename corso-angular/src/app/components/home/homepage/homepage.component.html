@@ -42,7 +42,7 @@
   </button>
 </div>
 <div class="align1" style="flex-direction: column">
-  <div *ngFor="let item of users; index as i">
+  <div *ngFor="let item of persone; index as i">
     <p *ngIf="i < incrementa">
       <strong>{{ i + 1 }} {{ item.nome }} </strong>{{ item.cognome }}
       {{ item.citta }} {{ item.dataNascita | date: "d MMMM yyyy" }} 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 import { TestService } from 'src/app/services/test.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class NavbarComponent {
   bgcolor = 'BackgroundGrigio';
   testOggetto = 'Stefano';
 
-  constructor(public serviceTool: TestService) {}
+  constructor(public serviceTool: TestService, private authService: AuthService) {}
 
   ngOnInit() {
     this.serviceTool.funzioneColor1$.subscribe(() => {
@@ -39,5 +40,8 @@ export class NavbarComponent {
   }
   changeColor3() {
     this.bgcolor = 'BackgroundRosa';
+  }
+  onLogout(){
+    this.authService.logout()
   }
 }
